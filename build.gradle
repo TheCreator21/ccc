@@ -1,0 +1,28 @@
+plugins {
+    id 'java'
+    id 'maven'
+}
+
+group 'com.experitest'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+    maven {
+        url "https://qacloud.experitest.com/repo/"
+    }
+    maven { url "http://repo.maven.apache.org/maven2" }
+}
+
+dependencies {
+
+    compile group: 'junit', name: 'junit', version: '4.12'
+    compile group: 'com.experitest', name: 'seetest-client', version: '12.9'
+    compile group: 'io.appium', name: 'java-client', version: '5.0.4'
+    compile group: 'org.webjars.npm', name: 'css-in-js-utils', version: '2.0.0'
+    compile group: 'org.slf4j', name: 'slf4j-api', version: '1.7.25'
+    compile group: 'com.experitest', name: 'appium-seetest-extension', version: '+'
+
+}
